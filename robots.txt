@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kelsey-lawlor.github.io/kelsey-lawlor-website/sitemap.xml

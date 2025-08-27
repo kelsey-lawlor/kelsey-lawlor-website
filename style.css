@@ -134,6 +134,29 @@ body {
   border-radius: 8px;
 }
 
+/* Callout box on the About page */
+.callout-box {
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  /* Use a gradient similar to the hero for visual continuity */
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  color: #fff;
+}
+
+.callout-box p {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.callout-box .btn {
+  /* Reuse the existing .btn styling for the CTA button */
+  display: inline-block;
+}
+
+
 /* Style top-level headings inside content sections (h1) */
 .about-section h1,
 .contact-section h1 {
