@@ -1,0 +1,202 @@
+/*
+ * Shared style sheet for Kelsey's personal brand website.
+ * Defines the color palette, typography and layout for a modern,
+ * minimalist look inspired by blues, purples, white and teal.
+ */
+
+/* CSS variables for easy theme adjustments */
+:root {
+  --primary-color: #2e4a7e; /* deep blue for the nav and footer */
+  --secondary-color: #586ba4; /* muted purple for headings */
+  --accent-color: #00a7c2; /* teal accent */
+  --background-color: #f7f9fb; /* light background for sections */
+  --text-color: #333333; /* dark grey text for readability */
+  --link-color: #2e4a7e;
+  --link-hover-color: #00a7c2;
+  --nav-height: 64px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  padding: 0 2rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--accent-color);
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  color: #ffffff;
+  text-align: left;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* Content sections */
+.about-section,
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.about-section h2,
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-section h3 {
+  color: var(--secondary-color);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.experience ul,
+.education-list,
+.contact-list {
+  padding-left: 1.2rem;
+}
+
+.experience li,
+.education-list li,
+.contact-list li {
+  margin-bottom: 0.6rem;
+}
+
+/* Link styling */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .headshot {
+    margin-bottom: 1.5rem;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
