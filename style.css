@@ -11,7 +11,7 @@
   --accent-color: #00a7c2; /* teal accent */
   --background-color: #f7f9fb; /* light background for sections */
   --text-color: #333333; /* dark grey text for readability */
-  --link-color: #2e4a7e;
+  --link-color: #0077cc;
   --link-hover-color: #00a7c2;
   --nav-height: 64px;
   font-family: 'Open Sans', sans-serif;
@@ -237,4 +237,32 @@ footer {
     justify-content: center;
     margin-top: 0.5rem;
   }
+}
+/* Inline/content links only
+   - Excludes anything inside nav/header or common nav wrappers
+   - Excludes links styled as buttons (.btn, .button, .cta), or with role="button"
+*/
+a[href]
+  :not(:where(nav *, header *, .nav *, .site-nav *, .main-nav *))
+  :not(:where(.btn, .button, .cta, [class*="btn"], [class*="button"], [role="button"])) {
+  color: #0077cc; /* lighter blue for visibility */
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+a[href]
+  :not(:where(nav *, header *, .nav *, .site-nav *, .main-nav *))
+  :not(:where(.btn, .button, .cta, [class*="btn"], [class*="button"], [role="button"])):hover,
+a[href]
+  :not(:where(nav *, header *, .nav *, .site-nav *, .main-nav *))
+  :not(:where(.btn, .button, .cta, [class*="btn"], [class*="button"], [role="button"])):focus {
+  color: #005fa3; /* darker blue on hover/focus */
+  text-decoration: underline;
+}
+
+/* Visited state — still excludes buttons & nav */
+a[href]
+  :not(:where(nav *, header *, .nav *, .site-nav *, .main-nav *))
+  :not(:where(.btn, .button, .cta, [class*="btn"], [class*="button"], [role="button"])):visited {
+  color: #800080; /* purple for visited */
 }
